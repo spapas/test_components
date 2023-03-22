@@ -1,0 +1,8 @@
+<button class="btn btn-{{ btn_color }}"
+  type="button" data-bs-toggle="collapse"
+  data-bs-target="#collapse-{{rid}}" aria-expanded="false" aria-controls="collapse-{{rid}}">
+  {{ title }}
+</button>
+<div class=" row row-cols-md-auto g-3 align-items-center filter-form collapse {% if border_color %}border border-{{ border_color }} rounded{% endif %}" id="collapse-{{rid}}">
+  {% slot "body" %}{% endslot %}
+</div>
